@@ -154,7 +154,8 @@ def move_temp(target_path: str, output_path: str) -> None:
     temp_output_path = get_temp_output_path(target_path)
     if os.path.isfile(temp_output_path):
         if os.path.isfile(output_path):
-            os.remove(output_path)
+            #os.remove(output_path)
+            pass
         shutil.move(temp_output_path, output_path)
 
 
