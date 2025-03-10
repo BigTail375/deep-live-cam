@@ -9,8 +9,9 @@ import uuid
 app = FastAPI()
 
 async def save_input_files(target, source):
+    PATH = './images'
     try:
-        with open(target.filename, 'wb') as f:
+        with open(os.path.join(PATH, target.filename), 'wb') as f:
             shutil.copyfileobj(target.file, f)
     
     except Exception:
@@ -19,7 +20,7 @@ async def save_input_files(target, source):
         target.file.close()
 
     try:
-        with open(source.filename, 'wb') as f:
+        with open(os.path.join(PATH, source.filename), 'wb') as f:
             shutil.copyfileobj(source.file, f)
     except Exception:
         return {"message": "There was an error uploading the file"}
