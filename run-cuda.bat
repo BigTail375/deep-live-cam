@@ -1,0 +1,1 @@
+python run.py --execution-provider cuda --source E:\1_TASK\2025_02_25_Python_Deepfake\Deep-Live-Cam\images\source.jpg --target E:\1_TASK\2025_02_25_Python_Deepfake\Deep-Live-Cam\images\target.mp4 --output E:\1_TASK\2025_02_25_Python_Deepfake\Deep-Live-Cam\images\output.mp4 --keep-fps
